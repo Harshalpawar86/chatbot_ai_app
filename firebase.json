@@ -1,0 +1,38 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "ai-chatbot-e7a00",
+          "appId": "1:490943683654:android:91b4e6b818f70cb1e1fe47",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "ai-chatbot-e7a00",
+          "configurations": {
+            "android": "1:490943683654:android:91b4e6b818f70cb1e1fe47",
+            "web": "1:490943683654:web:f20fcedd0d0add66e1fe47"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}
